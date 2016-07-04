@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>BubbleTip Demo</title>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+	
+	<script src="js/jQuery.bubbletip-1.0.6.js" type="text/javascript"></script>
+	<link href="js/bubbletip/bubbletip.css" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+	<link href="js/bubbletip/bubbletip-IE.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+	<style type="text/css">
+		pre.tip
+		{
+			margin: 0px;
+			padding: 5px;
+			font-size: 0.9em;	
+		}
+		pre.code
+		{
+			margin: 0px;
+			padding: 20px;
+			border: solid 1px #CCC;
+			font-size: 1.0em;
+		}
+
+	</style>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#a1_up').bubbletip($('#tip1_up'));
+
+			$('#a1_down').bubbletip($('#tip1_down'), {
+				deltaDirection: 'down',
+				deltaPosition: 50,
+				offsetTop: 20
+			});
+			$('#a1_left').bubbletip($('#tip1_left'), {
+				deltaDirection: 'left',
+				animationDuration: 100,
+				offsetLeft: -20
+			});
+			$('#a1_right').bubbletip($('#tip1_right'), { deltaDirection: 'right' });
+			$('#a1_trigger').bubbletip($('#tip1_trigger1'), { positionAtElement: $('#a1_target') });
+
+			$('#a_unbind').bubbletip($('#tip1_trigger2_unbind'));
+			$('#a_unbind').bind('click', function(event) {
+				$('#a1_trigger').removeBubbletip($('#tip1_trigger2'));
+				event.preventDefault();
+			});
+			$('#a_bind').bubbletip($('#tip1_trigger2_bind'));
+			$('#a_bind').bind('click', function(event) {
+				$('#a1_trigger').bubbletip($('#tip1_trigger2'), {
+					positionAtElement: $('#a1_target'),
+					deltaDirection: 'down',
+					delayShow: 500,
+					delayHide: 1000
+				});
+				event.preventDefault();
+			});
+
+			$('#inpText').bubbletip($('#tip1_focusblur'), {
+				deltaDirection: 'right',
+				bindShow: 'focus',
+				bindHide: 'blur'
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="bubbletipanchor"></div>
+
+	
+<!--
+<h4>examples</h4>
+<p>MOUSEOVER to open a tooltip 
+	<a id="a1_up" href="http://www.b.dk">above</a>, 
+	<a id="a1_down" href="#">below</a>, 
+	<a id="a1_left" href="#">to the left</a> or 
+	<a id="a1_right" href="#">to the right</a> of any element.</p>
+
+<p>MOUSEOVER a 
+	<a id="a1_trigger" href="#">trigger element</a> [ <a href="#" id="a_bind">bind</a> / <a href="#" id="a_unbind">unbind</a> ] to open a tooltip above and below a 
+	<a id="a1_target" href="#">target element</a>.</p>
+
+-->
+
+
+<div id="tip1_up" style="display:none;"><pre class="tip">{ deltaDirection: 'up' }</pre></div>
+<div id="tip1_down" style="display:none;">
+<pre class="tip">{ 
+    deltaDirection: 'down', 
+    deltaPosition: 100,
+    offsetTop: 10 
+}</pre>
+</div>
+<div id="tip1_left" style="display:none;">
+<pre class="tip">{ 
+    deltaDirection: 'left', 
+    animationDuration: 100,
+    offsetLeft: -20 
+}</pre>
+</div>
+<div id="tip1_right" style="display:none;"><img src="bubble.jpg" width="128" height="128" /></div>
+<div id="tip1_trigger1" style="display:none;">
+<pre class="tip">{ 
+    deltaDirection: 'up', 
+    positionAtElement: $('#a1_target')
+}</pre>
+</div>
+<div id="tip1_trigger2" style="display:none;">
+<pre class="tip">{ 
+    deltaDirection: 'down', 
+    positionAtElement: $('#a1_target')
+    delayShow: 500,
+    delayHide: 1000			
+}</pre>
+</div>
+
+				<h2 style="font-size:32px;text-decoration:none;"><p>VELKOMMEN TIL<br>PARTNER PUBLISHING</p></h2>
+						
+						<p><h2 style="font-size:15px;text-decoration:none;line-height:0.8em;"><a id="a1_up" href="http://www.b.dk" style="color:#70aba7">TEMABASERET INFORMATIONS JOURNALISTIK</a></h2></p>
+<div id="tip1_up" style="display:none;"><pre class="tip">{ deltaDirection: 'up' }</pre></div>
+						<h2 style="font-size:32px;text-decoration:none;line-height:0.4em;"><a id="a1_up" href="#" style="color:#534e92">PARTNERUDGIVELSER</a></h2>
+						<h2 style="font-size:16px;text-decoration:none;line-height:0.3em;"><a href="#" style="color:#776b62">ALTERNATIV TIL TRADITIONEL ANNONCERING</a></h2>
+						<h2 style="font-size:40px;text-decoration:none;line-height:0.3em;"><a href="#" style="color:#5e5e5d">TEMAUDGIVELSER</a></h2>
+						<h2 style="font-size:24px;text-decoration:none;line-height:0.5em;"><a href="#" style="color:#717171">STRATEGISK KOMMUNIKATION</a></h2>
+						<h2 style="font-size:32px;text-decoration:none;line-height:0.5em;"><a href="#" style="color:#a8998d">ONLINE EKSPONERING</a></h2>
+						<h2 style="font-size:18px;text-decoration:none;line-height:0.3em;"><a href="#" style="color:#adc557">FORMATER OG KVALITET EFTER BEHOV</a></h2>
+						<h2 style="font-size:28px;text-decoration:none;line-height:0.8em;"><a href="#" style="color:#db9f41">PROJEKTLEDELSE AF A-Å</a></h2>
+						<h2 style="font-size:21px;text-decoration:none;line-height:0.5em;"><a href="#" style="color:#a6bfd3">SKRÆDDERSYET KOMMUNIKATION</a></h2>
+
+
+</body>
+</html>
+
+
+
+

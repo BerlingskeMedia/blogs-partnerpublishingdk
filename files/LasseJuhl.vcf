@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Address Book 6.1.3//EN
+N:Juhl;Lasse;;;
+FN:Lasse Juhl
+ORG:Berlingske Media;
+EMAIL;type=INTERNET;type=WORK;type=pref:ljh@berlingskemedia.dk
+TEL;type=CELL;type=VOICE;type=pref:+45 25 45 61 33
+item1.URL;type=pref:partnerpublishing.dk
+item1.X-ABLabel:_$!<HomePage>!$_
+CATEGORIES:Berlingske Media,card
+UID:EF2782A7-5573-48FC-872A-6FC4D40909E9
+X-ABUID:6F9F636F-DCD8-4316-988B-001770719DE6:ABPerson
+END:VCARD

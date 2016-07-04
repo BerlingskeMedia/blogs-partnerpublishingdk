@@ -1,0 +1,69 @@
+<h2 style="font-size:12px;">Seneste udgivelser</h2>
+	<h3 style="font-weight:400">
+<?php
+   $xml = simplexml_load_file('http://payment.e-pages.dk/external/berlingskemedia/archive.php');
+   $maxPapers = 8;
+   $antPapers = 0;
+   $numbPapers = count($xml->children());
+       
+   for($i=0; $i<$numbPapers; $i++)
+   {
+       if($antPapers<$maxPapers)
+       {  
+           if($xml->paper[$i]->attributes()->folder == "4463")
+           {
+              $tempTitel=$xml->paper[$i]->attributes()->title;
+              $titel = $tempTitel;
+              
+              if(strlen($tempTitel) >= 25)
+              {
+                $titel = substr($tempTitel, 0, 25) . "...";
+              }
+
+              $katalog='http://www.e-pages.dk/berlingskemedia/' . $xml->paper[$i]->attributes()->catalog . '/teasers/medium.jpg';
+              $katalogLink='http://www.e-pages.dk/berlingskemedia/' . $xml->paper[$i]->attributes()->catalog;
+              echo 
+              "<a href='$katalogLink' target='blank'>$titel</a><br>";
+              $antPapers++;
+
+           }
+       }
+       
+   }
+?>
+					</h3>
+<h2 style="font-size:12px;">Kommende</h2> 
+	<h3 style="font-weight:400">
+<?php
+   $xml = simplexml_load_file('http://payment.e-pages.dk/external/berlingskemedia/archive.php');
+   $maxPapers = 8;
+   $antPapers = 0;
+   $numbPapers = count($xml->children());
+       
+   for($i=0; $i<$numbPapers; $i++)
+   {
+       if($antPapers<$maxPapers)
+       {  
+           if($xml->paper[$i]->attributes()->folder == "4644")
+           {
+              $tempTitel=$xml->paper[$i]->attributes()->title;
+              $titel = $tempTitel;
+              
+              if(strlen($tempTitel) >= 25)
+              {
+                $titel = substr($tempTitel, 0, 25) . "...";
+              }
+
+              $katalog='http://www.e-pages.dk/berlingskemedia/' . $xml->paper[$i]->attributes()->catalog . '/teasers/medium.jpg';
+              $katalogLink='http://www.e-pages.dk/berlingskemedia/' . $xml->paper[$i]->attributes()->catalog;
+              echo 
+              "<a href='$katalogLink' target='blank'>$titel</a><br>";
+              $antPapers++;
+
+           }
+       }
+       
+   }
+?>
+	</h3>
+		<b><a href="alleudgivelser.php" style="line-height:0em;">Klik og se alle nuværende og kommende udgivelser</a></b>

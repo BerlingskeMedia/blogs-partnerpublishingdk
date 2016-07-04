@@ -1,0 +1,232 @@
+<!--<!DOCTYPE html>-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Kontakt Partner Publishing" />
+	<meta name="keywords" content="kontakt,kontakt-information,telefon,e-mail,salg" />
+	<meta name="author" content="Partner Publishing" />
+
+<style>
+			#infoslides a{ color:#fff; font-weight:900;padding: 0px;margin-left:0px;font:8pt Helvetica, Arial, sans-serif; }
+			#infoslides p{ color:#fff; font-weight:900;padding: 0px;margin-left:5px;font:8pt Helvetica, Arial, sans-serif; font-weight:900: }
+			#infoslides h3{ margin: 5px 5px 0 5px; color:#fff; font:9pt Helvetica, Arial, sans-serif; letter-spacing:0px; font-weight: 900;  }
+			#infoslides h2{ margin: 5px 5px 0 5px; color:#fff; font:8pt Helvetica, Arial, sans-serif; letter-spacing:0px; font-weight: 900;  }
+			#infoslides img{ background-color:#FFF;}
+
+			.boxgrid{ 
+				width: 100px; 
+				height: 125px; 
+				margin:0px 0px 3px 3px; 
+				float:right; 
+				background:#fff; 
+				border: solid 0px #8399AF; 
+				overflow: hidden; 
+				position: relative; 
+			}
+				.boxgrid img{ 
+					position: absolute; 
+					top: 105; 
+					left: 0; 
+					border: 0; 
+				}
+<!--
+				.boxgrid a{ 
+					padding: 0 0px; 
+					color:#FFF; 
+					font-weight:900; 
+					font:8pt Helvetica, Arial, sans-serif; 
+				}
+-->
+				
+			.boxcaption{ 
+				float: left; 
+				position: absolute;
+				top:105px; 
+				background: #6d888f; 
+				height: 125px; 
+				width: 100%; 
+				opacity: 0.95; 
+				/* For IE 5-7 */
+				filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+				/* For IE 8 */
+				-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+ 			}
+ 		
+ 	
+			.captionfull .boxcaption {  
+			    top: 260;  
+			    left: 0;  
+			}  
+			.caption .boxcaption {  
+			    top: 5;  
+			    left: 0;  
+			}  
+				
+</style>
+
+		
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+				//Vertical Sliding
+				$('.boxgrid.slidedown').hover(function(){
+					$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+				});
+				//Horizontal Sliding
+				$('.boxgrid.slideright').hover(function(){
+					$(".cover", this).stop().animate({left:'150px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+				});
+				//Diagnal Sliding
+				$('.boxgrid.thecombo').hover(function(){
+					$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+				});
+				//Partial Sliding (Only show some of background)
+				$('.boxgrid.peek').hover(function(){
+					$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+				});
+				//Full Caption Sliding (Hidden to Visible)
+				$('.boxgrid.captionfull').hover(function(){
+					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'260px'},{queue:false,duration:160});
+				});
+				//Caption Sliding (Partially Hidden to Visible)
+				$('.boxgrid.caption').hover(function(){
+					$(".cover", this).stop().animate({top:'45px'},{queue:false,duration:350});
+				}, function() {
+					$(".cover", this).stop().animate({top:'105px'},{queue:false,duration:150});
+				});
+			});
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<script type="text/javascript">
+			$(document).ready(function(){
+				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+		
+				//Caption Sliding (Partially Hidden to Visible)
+				$('.boxgrid.caption').hover(function(){
+					$(".cover", this).stop().animate({top:'60px'},{queue:false,duration:160});
+				}, function() {
+					$(".cover", this).stop().animate({top:'105px'},{queue:false,duration:160});
+				});
+			});
+		</script>
+-->
+<!-- SLUT Kontaktinfo-->
+
+<!-- DER MÅ IKKE VÆRE BODY HEAD OSV I INCLUDES?		<title>Kontaktgalleri</title>-->
+
+</head>
+
+	<body>
+
+					
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/_henrik.jpg" width="100px" height="150px"/>
+				<div class="cover boxcaption">
+					<h3>Henrik<br>Søgaard</h3>
+					<p>
+					Projektleder<br/>
+					Tlf. 2544 2432<br/>
+					<a href="mailto:hesg@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+				
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/_nina.jpg" width="100px" height="150px"/>
+				<div class="cover boxcaption">
+					<h3>Nina<br>Grønning</h3>
+					<p>
+					Projektleder<br/>
+					Tlf. 2545 6058<br/>
+					<a href="mailto:nigr@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/_khuram.jpg" width="100px" height="150px"/>
+				<div class="cover boxcaption">
+					<h3>Khuram<br>Ahsan</h3>
+					<p>
+					Teamchef<br/>
+					Tlf. 2681 8495<br/>
+					<a href="mailto:khah@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+										
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/_christen.jpg" width="100px" height="150px"/>
+				<div class="cover boxcaption">
+					<h3>Christen<br>Illemann</h3>
+					<p>
+					Projektleder<br/>
+					Tlf. 2338 2207<br/>
+					<a href="mailto:cic@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/_line.jpg" width="100px" height="150px">
+				<div class="cover boxcaption">
+					<h2>Line<br>Hermann Hass</h2>
+					<p>
+					Projektleder<br/>
+					Tlf. 2544 2431<br/>					
+					<a href="mailto:linh@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/maja.jpg" width="100px" height="150px">
+				<div class="cover boxcaption">
+					<h3>Maja Lykke<br>Møller</h3>
+					<p>
+					Projektleder<br/>
+					Tlf. 5076 4389<br/>					
+					<a href="mailto:malm@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>						
+	<!--						
+			<div class="boxgrid caption" id="infoslides">
+				<img src="images/kontakt/helle1.jpg" width="100px" height="150px"/>
+				<div class="cover boxcaption">
+					<h3>Helle<br>Idland</h3>
+					<p>
+					projektleder<br/>
+					Tlf. 2545 6140<br/>
+					<a href="mailto:heid@berlingskemedia.dk">Send e-mail</a>
+					</p>
+				</div>
+			</div>
+-->	
+	</body>
+</html>
